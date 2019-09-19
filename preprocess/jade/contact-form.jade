@@ -1,0 +1,13 @@
+form.contact-form(action="contact-form.php" method="post")
+        label(for="name") Имя:
+        input(type="text" name="name" placeholder="value.name" required="true")
+        label(for="email") Email:
+        input(type="email" name="email" placeholder="value.email" required="true")
+        span.form-hint Правильный формат "name@something.com"
+        label(for="tel") Tелефон:
+        input(type="tel" name="tel" placeholder="value.tel")
+        span.form-hint Правильный формат +380 ХХХ ХХХ ХХХ
+        label(for="message") Текст:
+        textarea(name="message" cols="40" rows="6" required="true")
+        input(name="no-spam" type="text" style="display:none" value="")
+        button.submit.btn.btn-lg(type="submit") Отправить сообщение

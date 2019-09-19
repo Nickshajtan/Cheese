@@ -1,0 +1,27 @@
+importJson data.json
+include html.jade
+    include header.jade
+        section.content-page
+            .clearfix
+            .col-sm-12
+                .row
+                    .col-sm-1
+                        form
+                            button.btn.btn-lg.back
+                                a(href="#" onclick='history.back();return false;') ❮
+                                    span.back-mobile Назад
+                    .col-sm-10
+                        center
+                            h1.entry-title(#{itemprop.title})
+                                a.entry-title-link(href="" itemprop="url")
+                    .container
+                        error-wrapper
+                            //Begin content
+                                Content here
+                            article
+                                center
+                                    p.
+                                        Такой страницы не существует!
+
+                        hr
+    include footer.jade

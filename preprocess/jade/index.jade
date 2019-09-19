@@ -1,0 +1,36 @@
+﻿include html.jade
+    include header.jade
+        section.page-wrapper
+            .clearfix
+            .container
+                .row
+                    //Left column
+                    .col-sm-2
+                        - var i = 0;
+                        - while( i < 3 )
+                        .col-sm-12.ad = i++;
+                            //google ad
+                                You can use these blocks as widget area or ad area
+                            script(type="text/javascript", src="http://pagead2.googlesyndication.com/pagead/show_ads.js" )
+
+                    //Center column
+                    .col-sm-8
+                        .content-wrapper( #{itemprop.article} itemscope itemtype="http://schema.org/Article")
+                            | <?php if(!$is_home_page) : ?>
+                                .but-panel
+                                    form
+                                        button#home.btn.btn-lg
+                                            a(href!="| <?php $template_url ?>" itemprop="url") На главную
+                                    form
+                                        button#up.btn.btn-lg
+                                            a(href="#") Вверх
+                            | <?php endif; ?>
+                    //Right column
+                    .col-sm-2
+                        - var j = 0;
+                        - while( j < 3 )
+                        .col-sm-12.ad = j++;
+                            //google ad
+                                You can use these blocks as widget area or ad area
+                            script(type="text/javascript", src="http://pagead2.googlesyndication.com/pagead/show_ads.js" )
+    include footer.jade

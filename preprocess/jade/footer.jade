@@ -1,0 +1,15 @@
+//Footer part of theme
+.clearfix
+| <?php if($is_home_page) : ?>
+    .modal
+        .register
+            include modal-form.jade
+| <?php endif; ?>
+section.footer-wrapper
+    include contact-form.jade
+    footer(itemscope itemtype="http://schema.org/Footer")
+        .row
+            -var n = 0;
+            - while( n < 3)
+            .col-sm-4 = n++;
+        .container-fluid

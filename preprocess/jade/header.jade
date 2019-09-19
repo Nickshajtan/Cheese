@@ -1,0 +1,40 @@
+importJson data.json
+    //Header part of theme with two menus
+    section.header-wrapper
+        header(itemscope itemtype="http://schema.org/Header")
+            //Fixed top menu
+            nav.navbar-fixed-top.navbar.navbar-inverse(itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="navigation")
+                .navbar-header.container-fluid
+                    button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    | <?php echo $logo; ?>
+                        //Dropdown menu
+                    .collapse.navbar-collapse#bs-example-navbar-collapse-2
+                        ul.nav.navbar-nav.nav_menu(role="menu")
+                            li(tabindex="-1")
+                                a(href="#")
+            //Header image&name
+            .slogan-wrapper.col-sm-12(role="banner")
+                .clearfix
+                h1.site-name(#{itemprop.title})
+                    | <?php echo $sitename ?>
+                p.site-slogan(#{itemprop.desc})
+                    | <?php echo $sitedescription ?>
+            .navbar.navbar-inverse.nav#aministration_menu(itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="navigation")
+                .container
+                    .navbar-header
+                        button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        img(src!="| <?php echo $template_url;?>" itemtype="https://schema.org/ImageObject")
+                        .collapse.navbar-collapse#bs-example-navbar-collapse-1
+                            //menu-slider
+                            .dock#dock
+                                .dock-container
+                                    a.dock-item
+                        img(src!="| <?php echo $template_url;?>" itemtype="https://schema.org/ImageObject")

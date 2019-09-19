@@ -1,0 +1,6 @@
+mixin modal(mtype, mname, mvalue)
+    input&attributes(attributes, attributes, attributes)
+form(method="post" action="modal-form.php")
+    +modal(type="text", name="name", value="value.name")
+    +modal(type="text", name="email", value="value.email")
+    +modal(type="submit", value="Подписаться!")

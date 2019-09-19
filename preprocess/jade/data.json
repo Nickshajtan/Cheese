@@ -1,0 +1,31 @@
+[
+  {
+    "Variables for": "Schema3.org",
+
+    "itemprop": {
+      "title": "itemprop='headline'",
+      "url": "itemprop='url'",
+      "article": "itemprop='articleBody'",
+      "desc": "itemprop='description'"
+    },
+    "Variables ": "for modal&contact forms",
+    "type": {
+      "text": "text",
+      "email": "email",
+      "tel": "tel",
+      "submit": "submit"
+    },
+    "nam": {
+      "name": "name",
+      "email": "email",
+      "tel": "tel",
+      "message": "message",
+      "no-spam": "no-spam"
+    },
+    "value": {
+      "name": "Введите Ваше имя",
+      "email": "Введите электронный адрес",
+      "tel": "Введите номер телефона"
+    }
+  }
+]
